@@ -1,0 +1,15 @@
+{
+    "name": "raider-physics",
+    "description": "A small physics engine in D.",
+    "homepage": "https://github.com/Raiderium/RaiderPhysics",
+    "license": "MIT",
+    "authors": ["Aiden Sibley"],
+
+    "targetName": "RaiderPhysics",
+    "targetPath": "lib",
+
+	"dependencies": { 
+		"raider-math": "~master",
+		"raider-tools": "~master"
+	}
+}
