@@ -1,5 +1,5 @@
-lib
-bin
-.dub
-*.userprefs
-test.bat
+/*
+!/source
+!dub.json
+!LICENSE
+!README.md
