@@ -3,8 +3,8 @@ module raider.physics.world;
 import core.sync.mutex;
 import raider.math.all;
 import raider.physics.bod;
-import raider.physics.collider;
-import raider.physics.shape;
+import raider.collision.collider;
+import raider.collision.shape;
 import raider.tools.reference;
 
 /**

@@ -1,7 +1,7 @@
 ﻿module raider.physics.collider;
 
 import raider.math.vec;
-import raider.physics.shape;
+import raider.collision.shape;
 import raider.tools.reference;
 
 /**
@@ -9,6 +9,9 @@ import raider.tools.reference;
  * 
  * A collider is associated with one or more shapes.
  * It defines callbacks for broad and narrow events.
+ * The collision library does not invoke colliders;
+ * they are stored as user data and invoked by the
+ * physics engine.
  */
 interface Collider
 {public:

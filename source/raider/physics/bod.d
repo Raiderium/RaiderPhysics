@@ -1,8 +1,9 @@
 ﻿module raider.physics.bod;
 
 import raider.math.all;
-import raider.physics.shape;
+import raider.collision.shape;
 import raider.physics.world;
+import raider.physics.surface;
 import raider.tools.array;
 import raider.tools.reference;
 
@@ -14,6 +15,14 @@ import raider.tools.reference;
  */
 final class Body
 {package:
+	vec3 pos; //Position
+	mat3 ori; //Orientation
+	vec3 lvel, avel; //Linear and angular velocities
+	vec3 facc, tacc; //Force and torque accumulators
+	double imass; // 1 / mass
+
+	R!Surface surface; //Default surface, if not overridden 
+
 	Array!(R!Shape) shapes; 
 	P!World world;
 
@@ -31,13 +40,13 @@ public:
 	///Get the total mass of the body.
 	@property double mass()
 	{
-		return 0.0;
+		return 1.0 / imass;
 	}
 
 	///Set the total mass of the body.
 	@property void mass(double value)
 	{
-
+		imass = 1.0 / value;
 	}
 
 	///Set the mass shape to a box of the given dimensions.
