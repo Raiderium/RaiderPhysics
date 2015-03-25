@@ -1,5 +1,6 @@
 {
     "name": "raider-physics",
+    "version": "0.0.1",
     "description": "A small physics engine in D.",
     "homepage": "https://github.com/Raiderium/RaiderPhysics",
     "license": "MIT",
@@ -9,8 +10,8 @@
     "targetPath": "lib",
 
 	"dependencies": { 
-		"raider-math": "~master",
-		"raider-collision": "~master",
-		"raider-tools": "~master"
+		"raider-math": ">0.0.0",
+		"raider-collision": ">0.0.0",
+		"raider-tools": ">0.0.0"
 	}
 }
