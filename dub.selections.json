@@ -1,0 +1,10 @@
+{
+	"fileVersion": 1,
+	"versions": {
+		"raider-collision": "0.0.1",
+		"raider-tools": "0.0.1",
+		"derelict-util": "2.0.0",
+		"derelict-physfs": "1.0.0",
+		"raider-math": "0.0.1"
+	}
+}

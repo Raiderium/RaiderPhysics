@@ -7,27 +7,30 @@ import raider.physics.surface;
 import raider.tools.array;
 import raider.tools.reference;
 
+
 /**
  * A mass.
  * 
  * Body + shapes = rigid body.
  * A body must not outlive the world it inhabits.
  */
-final class Body
+final class Body(BU, SU)
 {package:
 	vec3 pos; //Position
 	mat3 ori; //Orientation
 	vec3 lvel, avel; //Linear and angular velocities
 	vec3 facc, tacc; //Force and torque accumulators
-	double imass; // 1 / mass
+	double imass; //Inverse mass (1/mass)
 
 	R!Surface surface; //Default surface, if not overridden 
 
-	Array!(R!Shape) shapes; 
-	P!World world;
+	BU data;
+
+	Array!(R!(Shape!SU)) shapes; 
+	P!(World!(BU, SU)) world;
 
 public:
-	this(P!World world)
+	this(P!(World!(BU, SU)) world)
 	{
 		this.world = world;
 	}

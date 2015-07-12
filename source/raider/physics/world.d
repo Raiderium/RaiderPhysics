@@ -11,9 +11,9 @@ import raider.tools.reference;
  * Physical world encapsulating both collision and dynamics.
  */
 
-class World
+class World(BU, SU)
 {package:
-	R!Body staticBody;
+	R!(Body!(BU, SU)) staticBody;
 	int _pairs;
 	R!Mutex mutex;
 	vec3 _gravity = vec3(0,0,-9.81);

@@ -3,9 +3,9 @@
 import raider.physics.bod;
 import raider.tools.reference;
 
-final class Joint
+final class Joint(BU, SU)
 {public:
-	this(R!Body body1, R!Body body2 = null)
+	this(R!(Body!(BU, SU)) body1, R!(Body!(BU, SU)) body2 = null)
 	{
 		assert(body1);
 		assert(body1 !is body2); 
