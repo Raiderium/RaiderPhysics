@@ -1,6 +1,6 @@
-﻿module raider.physics.bod;
+module raider.physics.bod;
 
-import raider.math.all;
+import raider.math;
 import raider.collision.shape;
 import raider.physics.world;
 import raider.physics.surface;

@@ -1,7 +1,7 @@
 module raider.physics.world;
 
 import core.sync.mutex;
-import raider.math.all;
+import raider.math;
 import raider.physics.bod;
 import raider.collision.collider;
 import raider.collision.shape;
